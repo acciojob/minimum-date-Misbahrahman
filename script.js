@@ -9,7 +9,7 @@ function minDate(dates) {
 
 	console.log(minYear);
 
-	dates = dates.filter(funct(ele) => {
+	dates = dates.filter((ele) => {
 		let year = Number(ele.slice(0 , 4));
 		if(year == minYear)return ele;
 	});
@@ -19,11 +19,12 @@ function minDate(dates) {
 	let minMonth = 13;
 
 	for(let x of dates){
+	
 		let month = Number(x.slice(5 , 7));
 		minMonth = Math.min(month , minMonth);
 	}
 
-	dates = dates.filter(func(ele) => {
+	dates = dates.filter((ele) => {
 		let month = Number(ele.slice(5 , 7));
 		if(month == minMonth)return ele;
 	});
